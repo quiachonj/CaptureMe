@@ -58,10 +58,15 @@
     //}
     
     UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
-    [imagePicker setDelegate:self];
-    [self presentModalViewController:imagePicker animated:YES];
+    if([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
+    {
+        [imagePicker setSourceType:UIImagePickerControllerSourceTypeCamera];
+        [imagePicker setDelegate:self];
+        [self presentModalViewController:imagePicker animated:YES];
+    }else
+        NSLog(@"No camera found!");
     //[imagePicker release];
-
+    
 }
 - (void)viewWillDisappear:(BOOL)animated
 {
