@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-#import "com_savvinnoAppDelegate.h"
+#import "captureAppDelegate.h"
 
 int main(int argc, char *argv[])
 {
     @autoreleasepool 
     {
-        return UIApplicationMain(argc, argv, nil, NSStringFromClass([com_savvinnoAppDelegate class]));
+        return UIApplicationMain(argc, argv, nil, NSStringFromClass([captureAppDelegate class]));
     }
 }

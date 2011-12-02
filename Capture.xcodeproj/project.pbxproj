@@ -12,9 +12,9 @@
 		7E83990C146995190075CAF6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E83990B146995190075CAF6 /* CoreGraphics.framework */; };
 		7E839912146995190075CAF6 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7E839910146995190075CAF6 /* InfoPlist.strings */; };
 		7E839914146995190075CAF6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E839913146995190075CAF6 /* main.m */; };
-		7E839918146995190075CAF6 /* com_savvinnoAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E839917146995190075CAF6 /* com_savvinnoAppDelegate.m */; };
+		7E839918146995190075CAF6 /* captureAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E839917146995190075CAF6 /* captureAppDelegate.m */; };
 		7E83991B146995190075CAF6 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E839919146995190075CAF6 /* MainStoryboard.storyboard */; };
-		7E83991E146995190075CAF6 /* com_savvinnoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E83991D146995190075CAF6 /* com_savvinnoViewController.m */; };
+		7E83991E146995190075CAF6 /* captureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E83991D146995190075CAF6 /* captureViewController.m */; };
 		7E839926146995190075CAF6 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E839925146995190075CAF6 /* SenTestingKit.framework */; };
 		7E839927146995190075CAF6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E839907146995180075CAF6 /* UIKit.framework */; };
 		7E839928146995190075CAF6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E839909146995190075CAF6 /* Foundation.framework */; };
@@ -42,11 +42,11 @@
 		7E839911146995190075CAF6 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7E839913146995190075CAF6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7E839915146995190075CAF6 /* Capture-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Capture-Prefix.pch"; sourceTree = "<group>"; };
-		7E839916146995190075CAF6 /* com_savvinnoAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = com_savvinnoAppDelegate.h; sourceTree = "<group>"; };
-		7E839917146995190075CAF6 /* com_savvinnoAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = com_savvinnoAppDelegate.m; sourceTree = "<group>"; };
+		7E839916146995190075CAF6 /* captureAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = captureAppDelegate.h; sourceTree = "<group>"; };
+		7E839917146995190075CAF6 /* captureAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = captureAppDelegate.m; sourceTree = "<group>"; };
 		7E83991A146995190075CAF6 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		7E83991C146995190075CAF6 /* com_savvinnoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = com_savvinnoViewController.h; sourceTree = "<group>"; };
-		7E83991D146995190075CAF6 /* com_savvinnoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = com_savvinnoViewController.m; sourceTree = "<group>"; };
+		7E83991C146995190075CAF6 /* captureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = captureViewController.h; sourceTree = "<group>"; };
+		7E83991D146995190075CAF6 /* captureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = captureViewController.m; sourceTree = "<group>"; };
 		7E839924146995190075CAF6 /* CaptureTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CaptureTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E839925146995190075CAF6 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		7E83992D146995190075CAF6 /* CaptureTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "CaptureTests-Info.plist"; sourceTree = "<group>"; };
@@ -115,11 +115,11 @@
 		7E83990D146995190075CAF6 /* Capture */ = {
 			isa = PBXGroup;
 			children = (
-				7E839916146995190075CAF6 /* com_savvinnoAppDelegate.h */,
-				7E839917146995190075CAF6 /* com_savvinnoAppDelegate.m */,
+				7E839916146995190075CAF6 /* captureAppDelegate.h */,
+				7E839917146995190075CAF6 /* captureAppDelegate.m */,
 				7E839919146995190075CAF6 /* MainStoryboard.storyboard */,
-				7E83991C146995190075CAF6 /* com_savvinnoViewController.h */,
-				7E83991D146995190075CAF6 /* com_savvinnoViewController.m */,
+				7E83991C146995190075CAF6 /* captureViewController.h */,
+				7E83991D146995190075CAF6 /* captureViewController.m */,
 				7E83990E146995190075CAF6 /* Supporting Files */,
 			);
 			path = Capture;
@@ -262,8 +262,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E839914146995190075CAF6 /* main.m in Sources */,
-				7E839918146995190075CAF6 /* com_savvinnoAppDelegate.m in Sources */,
-				7E83991E146995190075CAF6 /* com_savvinnoViewController.m in Sources */,
+				7E839918146995190075CAF6 /* captureAppDelegate.m in Sources */,
+				7E83991E146995190075CAF6 /* captureViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
