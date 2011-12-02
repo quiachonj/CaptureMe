@@ -18,6 +18,8 @@ static uint8_t buffer[BUFFERSIZE];
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // Used this piece of code as test code...
+    
     // Override point for customization after application launch.
     EAAccessoryManager *p;
     p=[EAAccessoryManager sharedAccessoryManager];
@@ -144,8 +146,9 @@ static uint8_t buffer[BUFFERSIZE];
                 NSLog(@"numberRead: %d", numberRead);
                 NSLog(@"readBuffer: %s", readBuffer);
                 
-                // CAMCLICK -- launch camera
-
+                // interpret data stream as launch camera
+                // launch camera
+                
             }
             break;
         }

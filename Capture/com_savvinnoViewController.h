@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface com_savvinnoViewController : UIViewController
+@interface com_savvinnoViewController : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
+{
+    UIImagePickerController *picker;
+}
 
+@property (nonatomic, retain) UIImagePickerController *picker;
 @end

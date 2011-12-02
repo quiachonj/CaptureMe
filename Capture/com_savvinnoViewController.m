@@ -9,6 +9,7 @@
 #import "com_savvinnoViewController.h"
 
 @implementation com_savvinnoViewController
+@synthesize picker = _picker;
 
 - (void)didReceiveMemoryWarning
 {
@@ -22,6 +23,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    BOOL result = false;
+    result = [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]; 
+    NSLog(@"Source Camera: %d", result);
 }
 
 - (void)viewDidUnload
@@ -39,8 +44,15 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-}
 
+    if (_picker == nil) 
+    {
+        _picker = [[UIImagePickerController alloc] init];
+        _picker.delegate = self;
+        _picker.sourceType = UIImagePickerControllerSourceTypeCamera; 
+        [self presentModalViewController:_picker animated:YES];
+    }
+}
 - (void)viewWillDisappear:(BOOL)animated
 {
 	[super viewWillDisappear:animated];
