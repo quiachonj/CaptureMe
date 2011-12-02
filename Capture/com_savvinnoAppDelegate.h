@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <ExternalAccessory/ExternalAccessory.h>
 
-@interface com_savvinnoAppDelegate : UIResponder <UIApplicationDelegate>
+@interface com_savvinnoAppDelegate : UIResponder <UIApplicationDelegate, EAAccessoryDelegate, NSStreamDelegate>
+{
+    EASession *session;
+}
 
 @property (strong, nonatomic) UIWindow *window;
-
+@property (strong, nonatomic) EASession *session;
 @end
