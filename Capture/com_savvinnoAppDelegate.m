@@ -13,7 +13,7 @@
 @synthesize window = _window;
 @synthesize session = _session;
 
-#define BUFFERSIZE 10
+#define BUFFERSIZE 32
 static uint8_t buffer[BUFFERSIZE];
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -29,8 +29,7 @@ static uint8_t buffer[BUFFERSIZE];
     NSArray *accessories;
     accessories = [p connectedAccessories];
     
-    // connected accessories count; expected 2 emulated 
-    // accessories only as per emulator documentation
+    // connected accessories count
     NSLog(@"count: %u", [accessories count]); 
     
     for(EAAccessory *accessory in accessories)
@@ -66,16 +65,16 @@ static uint8_t buffer[BUFFERSIZE];
     }
     
     // output stream simulation
-    NSOutputStream *os = [NSOutputStream outputStreamToBuffer:buffer capacity:BUFFERSIZE];
+    //NSOutputStream *os = [NSOutputStream outputStreamToBuffer:buffer capacity:BUFFERSIZE];
     
     // setting up delegate
-    [os setDelegate:self];
+    //[os setDelegate:self];
     
     // schedule output on run
-    [os scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
+    //[os scheduleInRunLoop:[NSRunLoop currentRunLoop] forMode:NSDefaultRunLoopMode];
      
     // open output pandora's box
-    [os open];
+    //[os open];
     
     // input stream simulation
     NSData *data = [NSData dataWithBytesNoCopy:buffer length:BUFFERSIZE];
@@ -156,8 +155,8 @@ static uint8_t buffer[BUFFERSIZE];
             // writing an accessory event name for click...
             NSLog(@"NSStreamEventHasSpaceAvailable");
             
-            // write to the output stream
-            const uint8_t writeBuffer[] = {0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff};
+            // test write a null terminated string to the output stream
+            const uint8_t writeBuffer[] = "0123456789ABCDEF0123456789ABCDE";
             NSInteger numberWrite = [(NSOutputStream*)stream
                                      write:writeBuffer maxLength:sizeof(writeBuffer)];
             
