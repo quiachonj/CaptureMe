@@ -26,9 +26,9 @@
     
     // check for camera because...
     // emulation has NO CAMERA!!!
-    BOOL result = false;
-    result = [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]; 
-    NSLog(@"Source Camera: %d", result);
+    //    BOOL result = false;
+    //    result = [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]; 
+    //    NSLog(@"Source Camera: %d", result);
 }
 
 - (void)viewDidUnload
