@@ -10,8 +10,8 @@
 
 @interface com_savvinnoViewController : UIViewController<UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 {
-    UIImagePickerController *picker;
+    //UIImagePickerController *picker;
 }
 
-@property (nonatomic, retain) UIImagePickerController *picker;
+//@property (nonatomic, retain) UIImagePickerController *picker;
 @end

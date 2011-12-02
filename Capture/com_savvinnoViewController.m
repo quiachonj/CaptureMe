@@ -9,7 +9,7 @@
 #import "com_savvinnoViewController.h"
 
 @implementation com_savvinnoViewController
-@synthesize picker = _picker;
+//@synthesize picker = _picker;
 
 - (void)didReceiveMemoryWarning
 {
@@ -24,6 +24,8 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
+    // check for camera because...
+    // emulation has NO CAMERA!!!
     BOOL result = false;
     result = [UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]; 
     NSLog(@"Source Camera: %d", result);
@@ -34,6 +36,7 @@
     [super viewDidUnload];
     // Release any retained subviews of the main view.
     // e.g. self.myOutlet = nil;
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -44,14 +47,21 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    
+    // SIGABRT!!!
+    //if (_picker == nil) 
+    //{
+    //    _picker = [[UIImagePickerController alloc] init];
+    //    _picker.delegate = self;
+    //    _picker.sourceType = UIImagePickerControllerSourceTypeCamera; 
+    //    [self presentModalViewController:_picker animated:YES];
+    //}
+    
+    UIImagePickerController *imagePicker = [[UIImagePickerController alloc] init];
+    [imagePicker setDelegate:self];
+    [self presentModalViewController:imagePicker animated:YES];
+    //[imagePicker release];
 
-    if (_picker == nil) 
-    {
-        _picker = [[UIImagePickerController alloc] init];
-        _picker.delegate = self;
-        _picker.sourceType = UIImagePickerControllerSourceTypeCamera; 
-        [self presentModalViewController:_picker animated:YES];
-    }
 }
 - (void)viewWillDisappear:(BOOL)animated
 {
